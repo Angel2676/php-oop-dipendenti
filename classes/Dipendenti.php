@@ -19,7 +19,7 @@ class Dipendenti {
         if(empty($_codFiscale)) {
             die('devi inserire il codice fiscale');
         }
-        if(strlen($_codFiscale) < 16){
+        if(strlen($_codFiscale) <> 16){
             die('Inserisci un Codice Fiscale Corretto');
         }
         $this->codFiscale = $_codFiscale;
@@ -34,7 +34,7 @@ class Dipendenti {
             die('Insersici il numero di matricola');
         }
 
-        if(strlen($_matricolaInps) < 6) {
+        if(strlen($_matricolaInps) <> 6) {
             die('Inserisci una matricola INPS valida');
         }
         $this->matricolaInps = $_matricolaInps;
@@ -52,7 +52,7 @@ class Dipendenti {
     }
 
     public function getReparto(){
-    return $this->reparto;
+     return $this->reparto;
     }
 
     public function setStipendio($_retribuzioneOraria, $_oreLavoro, $_aliquota = 0.9){
